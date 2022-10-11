@@ -1,28 +1,19 @@
-function euklidesOblicz(){
-    let liczbaA=parseInt(document.getElementById("liczbaA").value);
-    let liczbaB=parseInt(document.getElementById("liczbaB").value);
-    while(liczbaA!==liczbaB){
-        if(liczbaA>liczbaB){
-            liczbaA=liczbaA-liczbaB;
-        }else{
-           liczbaB=liczbaB-liczbaA; 
-        }
+function oblicz(){
+    let wyraz=parseInt(document.getElementById("wyraz").value);
+    let wynik;
+    wynik=fibonacci(wyraz);
 
-    }
-    document.getElementById("euklidesWynik").value=liczbaA;
+    document.getElementById("wynik").value=wynik;
+
 }
-function obliczNWW(){
-    let liczbaNWWA=parseInt(document.getElementById("liczbaNWWA").value);
-    let liczbaNWWB=parseInt(document.getElementById("liczbaNWWB").value);
-    let x=liczbaNWWA*liczbaNWWB;
-    
-    while(liczbaNWWB!==0){
-        c=liczbaNWWA%liczbaNWWB;
-        liczbaNWWA=liczbaNWWB;
-        liczbaNWWB=c;
+function fibonacci(nrWyrazu){
+    let wynik=0;
+    if(nrWyrazu<=2){
+        wynik=1;
+    }else{
+        wynik=fibonacci(nrWyrazu-1)+fibonacci(nrWyrazu-2);
     }
-    let nww=x/liczbaNWWA;
-    document.getElementById("nwwWynik").value=nww;
-
+    return wynik;
+    
     
 }
