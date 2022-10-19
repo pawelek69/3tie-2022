@@ -1,19 +1,10 @@
-function oblicz(){
-    let wyraz=parseInt(document.getElementById("wyraz").value);
-    let wynik;
-    wynik=fibonacci(wyraz);
-
-    document.getElementById("wynik").value=wynik;
-
-}
-function fibonacci(nrWyrazu){
-    let wynik=0;
-    if(nrWyrazu<=2){
-        wynik=1;
-    }else{
-        wynik=fibonacci(nrWyrazu-1)+fibonacci(nrWyrazu-2);
+function obliczSilnia(){
+    let n=document.getElementById("liczbaN").value;
+    let i=1;
+    let silnia=1;
+    while(i!=n){
+        i=i+1;
+        silnia=silnia*i;
     }
-    return wynik;
-    
-    
+    document.getElementById("wynik").value=silnia;
 }
