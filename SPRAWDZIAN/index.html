@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="skrypt.js" defer></script>
+    <title>Dane rejestrascyjne</title>
+</head>
+<body>
+    <header>
+        <h1>Rejestracja pojazdów </h1>
+    </header>
+
+    <main>
+        <form id="formularz1" method="get" action="#" class="formularz">
+            <div>
+            <label for="wejscieA">Podaj markę auta </label>
+                <input type="text" name="wejscieA" id="wejscieA" class="wejscie">
+        </br>        </br>
+    </div>
+            <div>
+            <label for="wejscieB">Podaj model auta </label>
+                <input type="text" name="wejscieB" id="wejscieB" class="wejscie">
+            </br>        </br>
+        </div>
+            <label for="wejscieC">Podaj numer rejestracyjny auta </label>
+                <input type="text" name="wejscieC" id="wejscieC" class="wejscie">  
+            </br>
+        </br>
+
+            <label for="rodzaj paliwa">Wybierz rodzaj paliwa</label></br>
+            <select id="paliwo">
+                <option value="Benzyna">Benzyna</option>
+                <option value="olejek">Olej Napędowy</option>
+                <option value="Gaz">Gaz</option> 
+            </select>
+        </br>
+    </br>
+
+            <label for="Numer klienta">Numer klienta</label><br>
+            <input type="number" id="klient" name= "klient"><br><br>
+            
+            <div class="wiersz">
+                <input type="submit">
+            </div>
+            <div class="wiadomosc"></div>
+        </form>
+    </main>
+
+    <footer>
+        <p>Paweł Żyła</p>
+    </footer>
+</body>
+</html>
