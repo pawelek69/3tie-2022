@@ -1,28 +1,63 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="pl-PL">
 <head>
+    <!--kodowanie polskich znaków-->
     <meta charset="UTF-8">
+    <meta charset="iso-8859-2">
+    <meta charset="windows-1250">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- słowa kluczowe w stronie -->
+    <meta name="keywords" content="szkola, lekcje, nauka">
+    <!-- czy strona ma być indeksowan -->
+    <meta name="robots" content="index">
+    <!-- link do css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- podlaczenie pliku javascript-->
     <script src="skrypt.js"></script>
-    <title>Sprawdzanie czy liczba jest podzielna przez 3</title>
+
+    <title>Znaczniki</title>
 </head>
 <body>
-    <header>
-        <p><strong>Podzielność przez 3</strong></p>
-    </header>
-    <p>
-        Podaj wartośc do sprawdzenia podzielności 
-        <input type="number" id="liczba">
-    </p>
-        <button onclick="oblicz()">Sprawdź</button>
-        
-
-        <p>
-            Wynik działania to: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <output id="wynik"></output>
+    <header>Znaczniki HTML </header>
+    <section>
+        <h1>Lista znaczników</h1>
+        <ol>
+            <li>znacznik dołączenia obrazu "&lt;img src="adres" title="tytul wyswietlany po najechaniu myszką" alt="tekst alternatywny"   &gt;"</li>
+            <!-- znak &lt; zastępuje znak < 
+                znak &gt; zastępuje znak >
+            -->
+            <li>sekcja nagłówka "&lt;header&gt; i &lt;/header&gt;"</li>
+            <li>zbiór odnośników, menu, belka nawigacyjna "&lt;nav&gt; i &lt;/nav&gt;"</li>
+            <li>sekcje strony "&lt;section&gt; i &lt;/section&gt;"</li>
+            <li>znacznik treści, artykuł "&lt;article&gt; i &lt;/article&gt;"</li>
+            <li>panel boczny, boczne menu "&lt;aside&gt; i &lt;/aside&gt;"</li>
+            <li>stopka strona, stópeczka "&lt;footer&gt; i &lt;/footer&gt;"</li>
+            <li>cześć główna "&lt;main&gt; i &lt;/main&gt;"</li>
+            <li>lista wypunkowana "&lt;ol&gt; i &lt;/ol&gt;"</li>
+            <li>lista nieuporządkowana "&lt;ul&gt; i &lt;/ul&gt;"</li>
+            <li>element listy "&lt;li&gt; i &lt;/li&gt;"</li>
+            <li>typy listy numerownej: <br>
+                type="1" - lista z cyframi arabskimi (domyślna)<br>
+                type="A" - lista z wielkimi literami<br>
+                type="a" - lista z małymi literami<br>
+                type="I" - lista z cyframi dużymi rzymskimi<br>
+                type="i" - lista z cyframi małymi rzymskimi<br>
+            </li>
+            <li>
+                <table
+            </li>
+        </ol>
+    </section>
+    <section>
+        <img src="tiger.jpg" title="Czołg Tiger" alt="tiger obrazek">
+        <p>Struktura bloków html5
+            <br>
+            <img src="struktura-HTML5.jpg" alt="struktura bloków">
+        </p>
+    </section>
     <footer>
-        Stronę przygotował Przemysław
+        Stronę wykonał Paweł
     </footer>
-    
 </body>
 </html>
