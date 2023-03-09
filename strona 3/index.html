@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaskadowe arkusze stylów</title>
+    <style>
+        #normalny{
+            font-size: 25pt !important;
+            color:darkcyan
+        }
+        .dziedziczenie{
+            font-size:40pt;
+            color:deeppink;
+        }
+       
+
+        
+    </style>
+</head>
+<body>
+    <h1>Wstawianie stylów</h1>
+    <ol type="a">
+        <li>styl lokalny (w linii)</li>
+        <li>wewnętrzny arkusz stylów</li>
+        <li>zewnętrzny arkusz stylów</li>
+    </ol>
+
+    <h2>Styl lokalny</h2>
+    <p>określamy styl w znaczniku podając jako atrybut style-"właściwość: wartość;"</p>
+    <p style="color: greenyellow">Przykładowy akapit ze zmienionym kolorem</p>
+
+    <p>Można rozciągnąć styl lokalny na kilka znaczników za pomocą znacznika &lt;span&gt;</p>
+    <span style="color:brown">
+    <h3>Nagłówek 3 stopnia</h3>
+    <p>paragraf</p>
+    <label>etykieta</label>
+    </span>
+    <h2>Wewnętrzny arkusz stylów</h2>
+    <p>umieszczany jest wewnątrz dokumnetu html w sekcji "head" i wykorzystuje się do tego znaczniki &lt;style&gt; i &lt;/style&gt;. Poniżej przedstawiamy przykładową zawartość w sekcji head z wykorzystaniem znaczników style</p>
+    <p>
+        &lt;style&gt;<br>
+            body {background-color: cyan;}<br>
+            h1 {font-size: 16pt;}<br>
+
+        &lt;/style&gt;
+    </p>
+    <h2>Zewnętrzny arkusz stylów</h2>
+    <p>style są przechowywane w zewnętrznym pliku, co ułatwia jego zmianę w wielu stronach jednocześnie. Aby podliknować arkusz stylów należy w sekcji head dokumentu html wpisać znacznik  &lt;link rel="stylesheet" type="text/css" href="adres pliku"&gt;. Włąściwości selektorów wprowadza sie tak samo jak w przypadku wewnętrznego arkusza stylów.</p>
+
+    <h1> Kaskadowość arkuszy stylów</h1>
+    <p>Ważność stylów w dokumencie html (jako pierwszy najważniejszy, później mniej ważne - najważniejsze się zawsze wyświetli, mniej ważne tylko wtedy gdy ważniejsze nie wpływają na tą własność) </p>
+    <ol>
+        <li>styl lokalny</li>
+        <li>rozciaganie stylu - znacznik span</li>
+        <li>wydzielone bloki - znaczniki div, section</li>
+        <li>wewnętrzny arkusz stylów</li>
+        <li>zewnętrzny arkusz stylów</li>
+        <li>import stylów do zewnętrznego arkusza</li>
+        <li>atrybuty definiowane w dokumentcie html - </li>
+    </ol>
+    <p>Można zmieniać kolejność ważności arkuszów stylów wykorzystując polecenie !importat umieszczone w deklaracji stylu po wartości, której dotyczy</p>
+    <p>p {font-size:20pt !important; color: green}</p>
+    <p id="normalny" style="font-size:15pt;">Przykładowy tekst ważności stylów</p>
+    <p style="font-size:15pt;">Przykładowy tekst ważności stylów</p>
+    <h1>Dziedziczenie stylów</h1>
+    <p>Pozwala na przenikanie właściwości między stylami. Polega na tym, że jeżeli w stylu ważniejszym nie został zdefiniowany dany selektor to przyjmuje on właściwości stylu niższego rzędu</p>
+    <p class="dziedziczenie">Dziedziczenie <span style="font-size:20pt">stylów</span></p>
+    <p>Dziedziczenie <span style="font-size:20pt">stylów</span></p>
+    <h1>składnia języka css</h1>
+    <p><strong>selektor{ własciwosci:Wartość}</strong> - budowa znacznika
+    CSS</p>
+    <p>selektor odpowiada znacznikowi html,nazwa klasy lub nazwie id danego elementu
+
+    </p>
+    <p>własciwosci-element okreslajacy sposbo zmiany danego selektora</p>
+    <p>wartość- zbiór dopuszczalnych danych i rodzajow dla danej wlasciwosci.
+
+    Może byc wyrazona za pomoca</p>
+    <ul>
+        <li>liczba</li>
+        <li>procenty</li>
+        <li>słowa kluczowe</li>
+        <li> kednostki miary- in (cal) , cm (centymetr), mm(milimetr), pt punkty 1 cal,
+            ex(wysokosc małej litery w tekscie)
+        </li>
+        <l1>jednoistka czasu</l1>
+        <li>ciągi znaków </li>
+        <li>URL</li>
+
+
+    </ul>
+    <h2>Kolory</h2>
+    <p>Wartość koloru może byc podana na trzy sposoby</p>
+    <ul>
+        <li>RGB</li>
+        <li>heksadecymalny kod</li>
+        <li>słownie np.black</li>
+    </ul>
+    <h1>selektor</h1>
+    <h2>selektory elementów</h2>
+    <p>do okreslenia stylu uzywamy znacznikow html. W stylu podajemy tylkonazwe znacznika html</p>
+    <h2>Selektor uniwersalny</h2>
+    <p>* - okresla wartości dla wszystkich znacznikow</p>
+    <h2>selektor potomka</h2>
+    <p>okreslamy styl dla znacznika ktory znajduje sie we wnetrzu innego znacznika 
+        np. div p {}
+    </p>
+    <h2>selektor dziecka </h2>\
+    <p>selektor dziecka sluzy do definiowania formatowania elementow, które
+        znajduja sie o jeden rzad mizej w hierarchi drzewa 
+    </p>
+    <div>
+        Przykład dla selektora dziecka<br>
+        tekst wewnetrzny div <span> a teraz span</span>
+        <p>tekst wewnetrzny div i p <span>a teraz span </span></p>
+
+    </div>
+
+</body>
+</html>
